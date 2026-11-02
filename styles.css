@@ -658,3 +658,78 @@ footer p {
     }
 
 }
+
+
+/* ACCESO QR EN EL INICIO */
+
+.acceso-qr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 25px;
+    background: #101b32;
+    border: 1px solid #243957;
+    border-radius: 16px;
+}
+
+.acceso-qr-texto {
+    flex: 1;
+}
+
+.acceso-qr-texto h3 {
+    color: #00bfff;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.acceso-qr-texto p {
+    color: #c5d2e5;
+    line-height: 1.6;
+}
+
+.acceso-qr-imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.acceso-qr-imagen img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    max-width: 100%;
+}
+
+.acceso-qr-imagen span {
+    color: #101b32;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 700px) {
+    .acceso-qr {
+        flex-direction: column;
+        text-align: center;
+        margin: 20px 15px;
+        padding: 20px;
+    }
+
+    .acceso-qr-texto h3 {
+        font-size: 19px;
+    }
+
+    .acceso-qr-imagen img {
+        width: 160px;
+        height: 160px;
+    }
+}
