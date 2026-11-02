@@ -1,0 +1,92 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizar código QR - ScamShield</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">ScamShield</a>
+        <a href="index.html" class="volver">Volver al inicio</a>
+    </header>
+
+    <main class="pagina-herramienta">
+
+        <h1>Analizador de códigos QR</h1>
+
+        <p>
+            Escaneá un código QR desde una imagen o utilizando
+            la cámara de tu dispositivo.
+        </p>
+
+        <div class="qr-opciones">
+
+            <!-- Opción para seleccionar una imagen -->
+            <section class="qr-opcion">
+
+                <div class="qr-icono">🖼️</div>
+
+                <h2>Seleccionar una imagen</h2>
+
+                <p>
+                    Elegí una foto o captura que contenga
+                    un código QR.
+                </p>
+
+                <input
+                    type="file"
+                    id="imagenQR"
+                    accept="image/*"
+                >
+
+                <p id="estadoImagen" class="qr-estado"></p>
+
+            </section>
+
+            <!-- Opción para utilizar la cámara -->
+            <section class="qr-opcion">
+
+                <div class="qr-icono">📷</div>
+
+                <h2>Escanear con cámara</h2>
+
+                <p>
+                    Activá la cámara para leer un código QR
+                    en tiempo real.
+                </p>
+
+                <button id="iniciarCamara" class="boton-principal">
+                    Activar cámara
+                </button>
+
+                <button id="detenerCamara" class="boton-principal" hidden>
+                    Detener cámara
+                </button>
+
+                <div id="lectorQR"></div>
+
+                <p id="estadoCamara" class="qr-estado"></p>
+
+            </section>
+
+        </div>
+
+        <div class="qr-advertencia">
+            <p>
+                ⚠️ ScamShield analizará el contenido del QR.
+                No abras enlaces desconocidos sin comprobarlos.
+            </p>
+        </div>
+
+    </main>
+
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="qr.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,660 @@
+
+
+/* =================================
+   CONFIGURACIÓN GENERAL
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080f20;
+    color: white;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+/* =================================
+   ENCABEZADO
+================================= */
+
+header {
+    background: #101b32;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #263c5c;
+}
+
+header h2 {
+    color: #00bfff;
+    font-size: 26px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    color: #dce8f8;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00bfff;
+}
+
+/* =================================
+   PRESENTACIÓN PRINCIPAL
+================================= */
+
+.inicio {
+    text-align: center;
+    padding: 110px 20px;
+    background: linear-gradient(135deg, #142b50, #080f20);
+}
+
+.etiqueta {
+    display: inline-block;
+    color: #00bfff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+.inicio h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.inicio p {
+    color: #bdc9dc;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.boton {
+    display: inline-block;
+    background: #009dff;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: #007acc;
+    transform: scale(1.05);
+}
+
+/* =================================
+   HERRAMIENTAS
+================================= */
+
+#herramientas {
+    padding: 75px 7%;
+    text-align: center;
+}
+
+#herramientas h2,
+#tecnologias h2,
+#nosotros h2 {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.subtitulo {
+    color: #bdc9dc;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.tarjeta {
+    background: #14233d;
+    padding: 35px 22px;
+    border-radius: 14px;
+    border: 1px solid #263c5c;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    border-color: #00bfff;
+    box-shadow: 0 8px 25px #001b35;
+}
+
+.icono {
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.tarjeta h3 {
+    margin-bottom: 18px;
+    color: #00bfff;
+    font-size: 20px;
+}
+
+.tarjeta p {
+    color: #bdc9dc;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.tarjeta a {
+    display: inline-block;
+    background: #007acc;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.tarjeta a:hover {
+    background: #009dff;
+}
+
+/* =================================
+   TECNOLOGÍAS UTILIZADAS
+================================= */
+
+#tecnologias {
+    padding: 75px 7%;
+    text-align: center;
+    background: #101b32;
+}
+
+.tecnologias-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.tecnologia {
+    background: #14233d;
+    border: 1px solid #263c5c;
+    border-radius: 14px;
+    padding: 30px 22px;
+    transition: 0.3s;
+}
+
+.tecnologia:hover {
+    transform: translateY(-6px);
+    border-color: #00bfff;
+}
+
+.tecnologia-icono {
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+
+.tecnologia h3 {
+    color: #00bfff;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.tecnologia p {
+    color: #bdc9dc;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* =================================
+   SOBRE EL CREADOR
+================================= */
+
+#nosotros {
+    padding: 85px 7%;
+    text-align: center;
+}
+
+.perfil {
+    max-width: 950px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    text-align: left;
+    background: #14233d;
+    border: 1px solid #263c5c;
+    border-radius: 18px;
+    padding: 40px;
+}
+
+.perfil-foto {
+    flex-shrink: 0;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #00bfff;
+    box-shadow: 0 0 25px #003e66;
+}
+
+.perfil-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+.perfil-informacion {
+    flex: 1;
+}
+
+.perfil-etiqueta {
+    color: #00bfff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.perfil-informacion h3 {
+    font-size: 30px;
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+.perfil-estudio {
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+.escuela {
+    color: #dce8f8;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.linea-perfil {
+    width: 65px;
+    height: 3px;
+    background: #00bfff;
+    margin: 22px 0;
+    border-radius: 5px;
+}
+
+.descripcion-perfil {
+    color: #bdc9dc;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* =================================
+   PIE DE PÁGINA
+================================= */
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    background: #101b32;
+    border-top: 1px solid #263c5c;
+}
+
+footer h3 {
+    color: #00bfff;
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #bdc9dc;
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #8193ad;
+}
+
+/* =================================
+   PÁGINAS DE HERRAMIENTAS
+================================= */
+
+.pagina-herramienta {
+    max-width: 850px;
+    margin: 70px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.pagina-herramienta h1 {
+    font-size: 36px;
+    color: #00bfff;
+    margin-bottom: 20px;
+}
+
+.pagina-herramienta p {
+    color: #bdc9dc;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.formulario {
+    background: #14233d;
+    padding: 35px;
+    border: 1px solid #263c5c;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.formulario textarea {
+    width: 100%;
+    min-height: 180px;
+    resize: vertical;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #385273;
+    background: #080f20;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #385273;
+    background: #080f20;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: #00bfff;
+    outline: none;
+}
+
+.formulario button {
+    margin-top: 20px;
+    padding: 14px 25px;
+    background: #009dff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formulario button:hover {
+    background: #007acc;
+}
+
+.formulario h2,
+.formulario h3 {
+    margin-bottom: 15px;
+}
+
+.formulario #mensajeOriginal {
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+.volver {
+    display: inline-block;
+    margin-top: 30px;
+    color: #00bfff;
+    text-decoration: none;
+}
+
+.volver:hover {
+    color: white;
+}
+
+/* =================================
+   LECTOR QR
+================================= */
+
+#lectorQR {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+#lectorQR video {
+    border-radius: 10px;
+}
+
+/* =================================
+   ADAPTACIÓN A TABLETS
+================================= */
+
+@media (max-width: 900px) {
+
+    .contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tecnologias-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .perfil {
+        gap: 30px;
+    }
+
+}
+
+/* =================================
+   ADAPTACIÓN A CELULARES
+================================= */
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .inicio {
+        padding: 75px 20px;
+    }
+
+    .inicio h1 {
+        font-size: 32px;
+    }
+
+    .inicio p {
+        font-size: 15px;
+    }
+
+    #herramientas,
+    #tecnologias,
+    #nosotros {
+        padding: 55px 20px;
+    }
+
+    #herramientas h2,
+    #tecnologias h2,
+    #nosotros h2 {
+        font-size: 27px;
+    }
+
+    .contenedor,
+    .tecnologias-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .perfil {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 20px;
+    }
+
+    .perfil-foto {
+        width: 190px;
+        height: 190px;
+    }
+
+    .linea-perfil {
+        margin: 20px auto;
+    }
+
+    .perfil-informacion h3 {
+        font-size: 26px;
+    }
+
+    .pagina-herramienta {
+        margin: 35px auto;
+        padding: 20px;
+    }
+
+    .pagina-herramienta h1 {
+        font-size: 29px;
+    }
+
+    .formulario {
+        padding: 20px;
+    }
+
+}
+
+
+/* =================================
+   DISEÑO DEL ANALIZADOR QR
+================================= */
+
+.qr-opciones {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 950px;
+    margin: 35px auto;
+}
+
+.qr-opcion {
+    background: #101b32;
+    border: 1px solid #243957;
+    border-radius: 18px;
+    padding: 30px 22px;
+    text-align: center;
+    min-width: 0;
+}
+
+.qr-opcion h2 {
+    color: #ffffff;
+    margin: 12px 0;
+}
+
+.qr-opcion p {
+    color: #b9c7dc;
+    line-height: 1.6;
+}
+
+.qr-icono {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.qr-opcion input[type="file"] {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 22px auto 10px;
+    color: #ffffff;
+}
+
+.qr-estado {
+    margin-top: 15px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.qr-advertencia {
+    max-width: 950px;
+    margin: 25px auto;
+    padding: 15px;
+    background: #14233d;
+    border-left: 4px solid #00bfff;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+#lectorQR {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+#lectorQR video {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.qr-opcion button {
+    margin: 8px 4px;
+    max-width: 100%;
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 700px) {
+
+    .qr-opciones {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin: 25px auto;
+    }
+
+    .qr-opcion {
+        padding: 24px 16px;
+    }
+
+    .pagina-herramienta {
+        padding: 20px 15px;
+    }
+
+    .qr-advertencia {
+        margin: 20px 0;
+    }
+
+    #lectorQR {
+        max-width: 100%;
+    }
+
+}
